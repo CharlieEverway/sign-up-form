@@ -1,3 +1,9 @@
+@font-face {
+    font-family: norse-bold;
+    src: url(fonts/Norse-Bold.otf);
+}
+
+
 #main-image {
     width: 500px;
     height: 100vh;
@@ -5,42 +11,123 @@
 
 }
 
-body, html{
-    height:100vh;
+body,
+html {
+    height: 100vh;
 }
 
+.image-area {
+    position: relative;
+}
 
-body{
+.odin-logo {
+    width: 20%;
+    height: auto;
+}
+
+.image-text {
+    font-size: 86px;
+}
+
+.photo-heading {
+    font-family: norse-bold;
+    position: absolute;
+    top: 25%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* optional background for readability */
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.photo-subtitle {
+    position: absolute;
+    top: 97%;
+    left: 0%;
+    width: 100%;
+    text-align: center;
+    color: rgb(223, 223, 223);
+    font-size: 0.8rem;
+}
+
+.photo-subtitle a,{
+    color: rgb(223, 223, 223);
+    text-decoration: underline;
+    font-weight: lighter;
+}
+
+a:link {
+    text-decoration: none;
+    color: #596D48;
+    font-weight: bold;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    text-decoration: underline;
+}
+
+body {
     display: flex;
     background-color: black;
     justify-content: center;
     margin: 0;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-family: 'Nunito', sans-serif;
 }
 
 
 .container {
     display: flex;
     width: 1440px;
-    height:100%;
+    height: 100%;
     background-color: rgb(243, 243, 243);
 
 }
 
 
-.account-link-container{
+.account-link-container {
     padding-left: 50px;
 }
 
-input{
+input {
     border: 1px solid #6d6d6d44;
     margin-bottom: 15px;
     padding: 5px 20px 5px 20px;
     border-radius: 5px;
+    font-size: 1rem;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
 }
 
-label{
+input:required:invalid:focus {
+    border: 2px solid red;
+}
+
+input::placeholder {
+    color: #999;
+    font-style: italic;
+}
+
+input:focus {
+    border-color: #4a90e2;
+    box-shadow: 0 0 5px rgba(74, 144, 226, 0.7);
+}
+
+label {
     font-family: 'Roboto', sans-serif;
     font-size: 0.75rem;
     font-weight: 600;
@@ -49,18 +136,21 @@ label{
     color: #333;
 }
 
-.form-row{
-    display: flex; gap: 5rem;
+.form-row {
+    display: flex;
+    gap: 5rem;
 }
 
-.sign-up-form{
+.sign-up-form {
     background-color: white;
     border: 0px solid white;
     box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.11);
 }
+
 button {
-    margin:40px;
-    background-color: #5B6E4E; /* modern indigo */
+    margin: 40px;
+    background-color: #596D48;
+    /* modern indigo */
     color: white;
     padding: 0.9rem 3rem;
     border: none;
@@ -69,43 +159,38 @@ button {
     font-family: inherit;
     cursor: pointer;
     transition: background-color 0.2s ease, box-shadow 0.2s ease;
-  }
-  
-  button:hover {
-    background-color: #4338ca; /* slightly darker on hover */
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  button:active {
-    background-color: #3730a3;
-  }
-
-.form-header-text{
-    font-size: 20px;
-    font-weight:900;
 }
 
-.form-fields{
+button:hover {
+    background-color: #4338ca;
+    /* slightly darker on hover */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:active {
+    background-color: #3730a3;
+}
+
+.form-header-text {
+    font-size: 20px;
+    font-weight: 900;
+    padding: 15px 0 0 30px;
+}
+
+.form-fields {
     padding: 10px 30px 10px 30px;
 
 }
-.form-header-text{
-    padding:15px 0px 0px 30px;
-}
-
-
 
 .main-form {
     display: flex;
     flex-direction: column;
-   
+
 
 }
 
 .form-detail-text {
     padding: 150px 180px 50px 50px;
     font-size: 23px;
-    font-weight:bold;
+    font-weight: bold;
 }
-
-/* REMEMBER TO ADD VARIABLES AND OTHER MORE DYNAMIC TEXT STYLINGS */
